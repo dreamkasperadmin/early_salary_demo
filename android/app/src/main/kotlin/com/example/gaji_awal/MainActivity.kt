@@ -1,4 +1,4 @@
-package com.example.gaji_awal
+package com.gajiawal.demo
 
 import io.flutter.embedding.android.FlutterActivity
 

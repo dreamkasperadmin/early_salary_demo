@@ -43,6 +43,7 @@ class LoginScreen extends StatelessWidget {
                 controller: passwordController,
                 inputWithLabel: true,
                 labelText: 'PASSWORD',
+                obscureText: true,
               ),
               PrimaryButton(
                 text: 'LOGIN NOW',
