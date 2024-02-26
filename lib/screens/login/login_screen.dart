@@ -34,6 +34,7 @@ class LoginScreen extends StatelessWidget {
           key: formKey,
           child: Column(
             children: [
+              Image.asset('assets/images/logo.png'),
               CustomTextField(
                 controller: mobileController,
                 inputWithLabel: true,

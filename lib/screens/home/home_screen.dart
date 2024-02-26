@@ -38,18 +38,22 @@ class MyHomePageConsumer extends StatelessWidget {
         return Scaffold(
           backgroundColor: Theme.of(context).scaffoldBackgroundColor,
           appBar: AppBar(
-            leading: state.currentTabIndex == 0 ? const Icon(Icons.menu) : null,
-            title: Text(
-              state.currentTabIndex == 0
-                  ? AppConstants.access
-                  : state.currentTabIndex == 1
-                      ? AppConstants.advancedActivity
-                      : AppConstants.profile,
-              style: TextStyle(
-                fontSize: 14.sp,
-                color: Theme.of(context).colorScheme.background,
-                fontWeight: FontWeight.bold,
-              ),
+            leading:  Image.asset('assets/images/logo.png',height: 70),
+            title: Row(
+              children: [
+                Text(
+                  state.currentTabIndex == 0
+                      ? AppConstants.access
+                      : state.currentTabIndex == 1
+                          ? AppConstants.advancedActivity
+                          : AppConstants.profile,
+                  style: TextStyle(
+                    fontSize: 14.sp,
+                    color: Theme.of(context).colorScheme.background,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
             ),
             centerTitle: true,
             actions: state.currentTabIndex == 0

@@ -65,7 +65,7 @@ class ShowOffersConsumer extends StatelessWidget {
                             height: 2.h,
                           ),
                           Text(
-                            '\$50 will be available to you within 5 minutes.',
+                            'MYR 50 will be available to you within 5 minutes.',
                             style: TextStyle(
                               fontSize: 12.sp,
                               color: Colors.white,
@@ -127,7 +127,7 @@ class ShowOffersConsumer extends StatelessWidget {
                             height: 2.h,
                           ),
                           Text(
-                            '\$${state.currentAmount.toStringAsFixed(0)}',
+                            'MYR ${state.currentAmount.toStringAsFixed(0)}',
                             style: TextStyle(
                               fontSize: 45.sp,
                               fontWeight: FontWeight.bold,
@@ -141,7 +141,7 @@ class ShowOffersConsumer extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                'Payback on 4/12',
+                                'Payback On Salary Day',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontSize: 10.sp,
@@ -179,14 +179,14 @@ class ShowOffersConsumer extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            '\$5',
+                            'MYR 5',
                             style: TextStyle(
                               fontSize: 12.sp,
                               color: Theme.of(context).colorScheme.secondary,
                             ),
                           ),
                           Text(
-                            '\$50',
+                            'MYR 500',
                             style: TextStyle(
                               fontSize: 12.sp,
                               color: Theme.of(context).colorScheme.secondary,
@@ -205,7 +205,7 @@ class ShowOffersConsumer extends StatelessWidget {
                             .add(ShowOffersEvent.onSliderDrag(newValue: value));
                       },
                       min: 5,
-                      max: 50,
+                      max: 500,
                     ),
 
                     SizedBox(
@@ -254,11 +254,11 @@ class ShowOffersConsumer extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [
                       ShowBalance(
-                        amount: '\$50',
+                        amount: 'MYR 500',
                         title: 'Available Today',
                       ),
                       ShowBalance(
-                        amount: '\$700',
+                        amount: 'MYR 700',
                         title: 'Available Pay Period',
                         isRight: false,
                       ),

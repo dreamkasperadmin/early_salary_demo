@@ -1,12 +1,39 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:sizer/sizer.dart';
+import 'dart:math' as math;
 
 class ActivityScreen extends StatelessWidget {
   const ActivityScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final List<Map<String, dynamic>> list = [
+      {
+        "date": "September 10th",
+        "coin": "250",
+        'color': Colors.amber,
+        "state": "Advance in Progress"
+      },
+      {
+        "date": "September 20th",
+        "coin": "250",
+        'color': Colors.amber,
+        "state": "Advance in Progress"
+      },
+      {
+        "date": "September 27th",
+        "coin": "150",
+        'color': Colors.amber,
+        "state": "Advance in Progress"
+      },
+      {
+        "date": "October 1st",
+        "coin": "650",
+        'color': Colors.lightGreen,
+        "state": "Deduction Complete"
+      }
+    ];
     return Column(
       children: [
         SizedBox(
@@ -51,11 +78,12 @@ class ActivityScreen extends StatelessWidget {
                   // color: Colors.red,
                   child: CircleAvatar(
                     radius: 2.w,
-                    backgroundColor: Colors.amber,
+                    backgroundColor:
+                      list[i]['color'],
                   ),
                 ),
                 title: Text(
-                  DateFormat('MMMEd').format(date),
+                  list[i]['date'] as String,
                   style: TextStyle(
                     fontSize: 12.sp,
                     fontWeight: FontWeight.bold,
@@ -63,19 +91,19 @@ class ActivityScreen extends StatelessWidget {
                   ),
                 ),
                 subtitle: Text(
-                  'Advance in Progress',
+                  list[i]['state'] as String,
                   style: TextStyle(
                     fontSize: 8.sp,
-                    color: Colors.amber,
+                    color:   list[i]['color'],
                   ),
                 ),
                 trailing: SizedBox(
-                  width: 20.w,
+                  width: 25.w,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
-                        '\$50',
+                        'MYR ${list[i]['coin']}',
                         style: TextStyle(
                           fontSize: 12.sp,
                           fontWeight: FontWeight.bold,
@@ -95,7 +123,7 @@ class ActivityScreen extends StatelessWidget {
                 ),
               );
             },
-            itemCount: 5,
+            itemCount: list.length,
           ),
         )
       ],
